@@ -12,8 +12,8 @@ public class UserCtr {
     private UserService userService;
 
     @RequestMapping("/getUser")
-    public User getUser(Integer id) {
-        User user = userService.getUser(id);
+    public User controllerGetUser(Integer id) {
+        User user = userService.serviceGetUser(id);
         System.out.println("-----------UserCtr---------" + id);
         return user;
     }

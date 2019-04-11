@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserDaoImpl implements UserDao {
     @Override
-    public User getUserById(Integer id) {
+    public User daoGetUserById(Integer id) {
         User user1 = new User(1, "zxx1", 11, "2001");
         User user2 = new User(2, "zxx2", 12, "2002");
         User user3 = new User(3, "zxx2", 13, "2003");

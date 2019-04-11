@@ -34,7 +34,10 @@ public class AopLog {
 
     //	切入点注解的表达式：就是需要AOP的地方(一般是业务逻辑层service,当然服务接口调用层controller也行,两者一起打印日志也行
     //	这个类似正则表达式,可以控制日志的精度(包下,类下,方法下)和切面的类型(业务层面,服务接口层面)相当灵活)
-    @Pointcut("execution(* com.example.boot.aop.serviceimpl..*(..))")
+
+//    @Pointcut("execution(* com.example.boot.aop.controller..*(..))")//控制层
+        @Pointcut("execution(* com.example.boot.aop.serviceimpl..*(..))")//业务层
+//        @Pointcut("execution(* com.example.boot.aop.dao..*(..))")//数据层
     //  @Pointcut("execution(* com.example.nba.repository.PlayerRep.*(..))")
     //切入点签名的方法，注意返回值必须是void,相当于切入点的无参构造
     public void mypointcut() {

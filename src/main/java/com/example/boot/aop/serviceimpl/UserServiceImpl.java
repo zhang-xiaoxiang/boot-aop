@@ -12,8 +12,8 @@ public class UserServiceImpl implements UserService {
 private UserDao userDao;
 
     @Override
-    public User getUser(Integer id) {
-        User user = userDao.getUserById(id);
+    public User serviceGetUser(Integer id) {
+        User user = userDao.daoGetUserById(id);
         System.out.println("---------UserServiceImpl--------"+user);
         return user;
     }

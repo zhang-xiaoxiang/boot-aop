@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 @Component
 public interface UserDao {
 
-    User getUserById(Integer id);
+    User daoGetUserById(Integer id);
 
 }
